@@ -5,11 +5,12 @@ function Balancer(props) {
     const [jj,jj_handler] = useState("")
     const [val,val_handler] = useState("")
     function kk(){
-        axios.get('http://127.0.0.1:8000/balancer/'+val)
+        axios.get('https://projectsbackend.herokuapp.com/'+val)
         .then(response=>{
             jj_handler(response.data)
         })
         .catch(e=>{
+            console.log(e)
             jj_handler("OOpps!!There is a problem..Please refresh your browser and try again!")
         })
     }
