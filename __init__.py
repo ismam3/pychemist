@@ -9,7 +9,10 @@ class Equation:
     A class for chemical equation. You should initialize it with an unbalanced chemical equation (eg. NaOH+HCl=NaCl+H2O)
     '''
     def __init__(self,equation):
-        self.equation = equation
+        if equation=='':
+            raise Exception('Sorry!You have initialized nothing')
+        else:
+            self.equation = equation
 
     def parser(self):
         '''
@@ -17,10 +20,13 @@ class Equation:
         :return:
         (reactants, products)
         '''
-        reactants,products = self.equation.split("=")
-        reactants = reactants.split("+")
-        products = products.split("+")
-        return reactants,products
+        try:
+            reactants, products = self.equation.split("=")
+            reactants = reactants.split("+")
+            products = products.split("+")
+            return reactants, products
+        except:
+            raise Exception("Please enter a valid equation")
 
     def molecules(self,part):
         '''
