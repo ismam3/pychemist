@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/pychemist/static/css/main.8e48938f.chunk.css",
+    "main.js": "/pychemist/static/js/main.7473ea84.chunk.js",
+    "main.js.map": "/pychemist/static/js/main.7473ea84.chunk.js.map",
+    "runtime-main.js": "/pychemist/static/js/runtime-main.2d7dc900.js",
+    "runtime-main.js.map": "/pychemist/static/js/runtime-main.2d7dc900.js.map",
+    "static/js/2.0d22ed73.chunk.js": "/pychemist/static/js/2.0d22ed73.chunk.js",
+    "static/js/2.0d22ed73.chunk.js.map": "/pychemist/static/js/2.0d22ed73.chunk.js.map",
+    "static/js/3.614caeb8.chunk.js": "/pychemist/static/js/3.614caeb8.chunk.js",
+    "static/js/3.614caeb8.chunk.js.map": "/pychemist/static/js/3.614caeb8.chunk.js.map",
+    "index.html": "/pychemist/index.html",
+    "static/css/main.8e48938f.chunk.css.map": "/pychemist/static/css/main.8e48938f.chunk.css.map",
+    "static/js/2.0d22ed73.chunk.js.LICENSE.txt": "/pychemist/static/js/2.0d22ed73.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/pychemist/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2d7dc900.js",
+    "static/js/2.0d22ed73.chunk.js",
+    "static/css/main.8e48938f.chunk.css",
+    "static/js/main.7473ea84.chunk.js"
+  ]
+}

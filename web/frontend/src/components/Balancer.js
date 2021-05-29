@@ -4,33 +4,28 @@ import axios from 'axios';
 class Balancer extends Component {
     constructor(props) {
         super(props);
-        this.state = {jj: "",
-                        val:"",
+        this.state = {result: "",
+                        equation:"",
                         };
       }
       changer = (event)=>{
-        if (event.target.value == null || ""){
-            this.setState({val:"Please send an equation!!"})
-        }
-        else{
-            this.setState({val:event.target.value})
-        }
+        this.setState({equation:event.target.value})
       }
 
       kk = ()=>{
-        if(this.state.val !=""){
-            axios.get('http://127.0.0.1:5000/equation/'+this.state.val)
+        axios.get('https://projectsbackend.herokuapp.com/equation/'+this.state.equation)
             .then(response=>{
-                this.setState({jj:response.data})
+                this.setState({result:response.data.balanced_equation})
             })
             .catch(e=>{
                 console.log(e.response)
-                this.setState({jj:"OOpps!!There is a problem..Please refresh your browser and try again!"})
+                if(e.response.status == 404){
+                    this.setState({result:"Dear chemist! please send a chemical equation"})
+                }
+                else{
+                    this.setState({result:"Dear chemist, please enter a valid chemical equation!"})
+                }
             })
-        }
-        else{
-            this.setState({jj:"Dear Chemist, please send an equation"})
-        }
       }
 
     render() {
@@ -41,10 +36,10 @@ class Balancer extends Component {
                         <h4 style={{textAlign:'left'}}>Balance your chemical equation</h4>
                         <input placeholder="e.g.,  Mg+O2=MgO" style={{fontSize:'28px',width:'93%'}} type="text" onChange={this.changer}></input>
                         <input style={{width:"200px"}} className="balance_button" type="button" value='Balance' onClick={this.kk}></input>
-                        {this.state.jj==""||"Please send an equation!!"||"OOpps!!There is a problem..Please refresh your browser and try again!"?
-                        <h3>{this.state.jj}</h3>
+                        {this.state.result==""||this.state.result=="Dear chemist, please enter a valid chemical equation!"||this.state.result=="Dear chemist! please send a chemical equation"?<h3 style={{fontSize:'30px',}}><span style={{fontFamily:"'Brush Script MT', cuesive"}}>{this.state.result}</span></h3>
                         :
-                        <h3 style={{fontSize:'30px',}}><span>Here it is:</span> <span style={{fontFamily:'Copperplate, Papyrus, fantasy'}}>{this.state.jj}</span></h3>}
+                        <h3 style={{fontSize:'30px',}}><span>Here it is:</span> <span style={{fontFamily:'Copperplate, Papyrus, fantasy'}}>{this.state.result}</span></h3>
+                        }
                     </div>
                 </div>
             </div>
