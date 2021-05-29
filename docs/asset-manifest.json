@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/pychemist/static/css/main.8e48938f.chunk.css",
-    "main.js": "/pychemist/static/js/main.7473ea84.chunk.js",
-    "main.js.map": "/pychemist/static/js/main.7473ea84.chunk.js.map",
+    "main.js": "/pychemist/static/js/main.54f2275b.chunk.js",
+    "main.js.map": "/pychemist/static/js/main.54f2275b.chunk.js.map",
     "runtime-main.js": "/pychemist/static/js/runtime-main.2d7dc900.js",
     "runtime-main.js.map": "/pychemist/static/js/runtime-main.2d7dc900.js.map",
     "static/js/2.0d22ed73.chunk.js": "/pychemist/static/js/2.0d22ed73.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.2d7dc900.js",
     "static/js/2.0d22ed73.chunk.js",
     "static/css/main.8e48938f.chunk.css",
-    "static/js/main.7473ea84.chunk.js"
+    "static/js/main.54f2275b.chunk.js"
   ]
 }
